@@ -1,6 +1,9 @@
 import re
 def is_palindrome(string):
-    y = re.sub(r'\W', '', string.lower())
+    s = str(string)
+    if len(s) == 0:
+        return False
+    y = re.sub(r'\W', '', s.lower())
     if len(y) == 0:
         return False
     elif y == y[::-1]:
@@ -8,6 +11,6 @@ def is_palindrome(string):
     else:
         return False
 
-z = "A man, a plan, a canal -- Panama"
+z = 333
 x = is_palindrome(z)
 print(x)
