@@ -20,7 +20,7 @@ class Dessert:
         self._calories = value
 
     def is_healthy(self):
-        if self.calories is not None and self.calories < 200:
+        if (isinstance(self.__calories, (int, float)) and self.__calories < 200):
             return True
         return False
 
@@ -45,5 +45,9 @@ class JellyBean(Dessert):
             return False
         return True
 
+    def is_healthy(self):
+        if (isinstance(self._calories, (int, float)) and self._calories < 200):
+            return True
+        return False
 
 

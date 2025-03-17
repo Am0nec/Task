@@ -20,10 +20,9 @@ class Dessert:
         self._calories = value
 
     def is_healthy(self):
-        if self.calories is not None and self.calories < 200:
+        if (isinstance(self._calories,(int,float)) and self._calories < 200):
             return True
         return False
 
     def is_delicious(self):
         return True
-

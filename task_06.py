@@ -22,12 +22,12 @@ def rps_game_winner(array):
     elif (item1 == "R" and item2 == "S") or \
         (item1 == "S" and item2 == "P") or \
         (item1 == "P" and item2 == "R"):
-        return array[0][0]
+        return array[0][0] + " " + array[0][1]
     else:
-        return array[1][0]
+        return array[1][0] + " " + array[1][1]
 
 try:
-    started_list = [['player1', 'P'],['player2', 'S']]
+    started_list = [['player1', 'S'],['player2', 'P']]
     print(rps_game_winner(started_list))
 except WrongNumberOfPlayersError as e:
     print(e)
