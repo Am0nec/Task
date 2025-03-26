@@ -9,16 +9,18 @@ def coincidence(subsequence = None, range_list = None):
 
     range_start = range_list[0]
     range_end = range_list[-1] - 1
+    print(range_start, range_end)
 
     for i in subsequence:
         if not isinstance(i, (int, float)):
             continue
         elif range_start <= i <= range_end:
             final_list.append(i)
+    final_list.append(i)
     return final_list
 
 started_list = [None, 1, 'foo', 4, 2, 2.5]
-range_list = (1, 4)
+range_list = [1, 4]
 x = coincidence(started_list, range_list)
 print(x)
 
